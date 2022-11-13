@@ -6,7 +6,7 @@ class BTS:
         self.right_child = None
 
     def insert(self,data): #adding new node to the tree
-        if data>self.data: #condition to make keep tree as BST
+        if data>self.data: #condition to keep tree as BST
             if self.right_child is None:
                 self.right_child=BTS(data)
             else:
