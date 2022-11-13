@@ -1,6 +1,6 @@
 # Traverse the current node's left subtree
-# Travers the current node"S right subtree
 # Visit the current node
+# Travers the current node"S right subtree
 
 class BTS:
     def __init__(self, data): #creating the root
@@ -20,20 +20,21 @@ class BTS:
             else: #if node allready exists call recursion
                 self.left_child.insert(data)
 
-    def postorder_walk(self):
+    def inorder_walk(self):
         if self.left_child:
-            self.left_child.postorder_walk()
-        if self.right_child:
-            self.right_child.postorder_walk()
+            self.left_child.inorder_walk()
         print(self.data)
+        if self.right_child:
+            self.right_child.inorder_walk()
 
 tree=BTS(25)
 tree.insert(20)
-tree.insert(22)
+tree.insert(26)
 tree.insert(19)
 tree.insert(21)
-tree.insert(23)
-tree.insert(27)
-tree.insert(26)
-tree.insert(28)
-tree.postorder_walk()
+tree.insert(22)
+tree.insert(6)
+tree.insert(12)
+tree.insert(18)
+tree.insert(20)
+tree.inorder_walk()
