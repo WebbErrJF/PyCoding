@@ -6,7 +6,7 @@ class Node:
 
 class BTS(Node):
     def insert(self,data) -> None: #adding new node to the tree
-        if data>self.data: #condition to keep tree as BST, any value that is greater than value of the root goes to the right 
+        if data>=self.data: #condition to keep tree as BST, any value that is greater than value of the root goes to the right 
             if not self.right_child:
                 self.right_child=BTS(data)
             else: #if node allready exists call recursion
