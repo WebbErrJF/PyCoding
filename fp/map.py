@@ -12,7 +12,7 @@ def map_func(function,data,n=0,output=[]):
         return map_func(function,data,n) #return it is needed here, beacause it returns data from return below
     elif n==len(data):
         final_output=[]
-        for element in output:
+        for element in output:  #added this "for" because by using clear, I am removing references, so final_output would also = "[]"
             final_output.append(element)
         output.clear()
         n=0
