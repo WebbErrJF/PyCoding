@@ -1,7 +1,7 @@
 data=[10,20,30,40,50,60,70,80,90,100]
 
 #function, thats provide what kind of operation will be done in map function
-def some_addition(value):
+def operation(value):
     return value+2
 
 
@@ -18,5 +18,5 @@ def map_func(function,data,n=0,output=[]):
         n=0
         return final_output
 
-print(map_func(some_addition,data))
-print(map_func(some_addition,data))
+print(map_func(operation,data))
+print(map_func(operation,data))
