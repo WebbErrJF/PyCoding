@@ -19,5 +19,6 @@ def filter_func(condition,data,n=0,filtred_data=[]): # I took advantage of fact,
         else:
             print(filtred_data)
             n=0
+            filtred_data.clear()
 
 filter_func(condition_func,data)
