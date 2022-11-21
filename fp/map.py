@@ -1,13 +1,10 @@
 data=[10,20,30,40,50,60,70,80,90,100]
 
-def map_func(function,data,maped_list=[]):
+def map_func(function,data):
     if len(data)>=1:
-        maped_list.append(function(data[0]))
-        return map_func(function,data[1:]) #return it is needed here, beacause it returns data from return below
+        return [function(data[0])] + map_func(function,data[1:])
     else:
-        output=maped_list.copy()
-        maped_list.clear()
-        return output
+        return []
 
 
 print(map_func(lambda value: value+2,data))
