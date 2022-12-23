@@ -14,3 +14,4 @@ print(filter_func(lambda value: value<50,data))
 print(filter_func(lambda value: value=="g",data2))
 
 #test1
+#test2323
